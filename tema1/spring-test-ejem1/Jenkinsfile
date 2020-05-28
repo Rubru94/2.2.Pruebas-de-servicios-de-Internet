@@ -2,7 +2,7 @@ node {
     stage("Build & test"){
         def mvnHome = tool 'M3'
         git 'https://github.com/Rubru94/2.2.Pruebas-de-servicios-de-Internet.git'
-        sh "cd tema1/spring-test-ejem1 : '${mvnHome}/bin/mvn' clean package"
+        sh "cd ./tema1/spring-test-ejem1 ; '${mvnHome}/bin/mvn' clean package"
     }
     stage("Post"){
         archiveArtifacts '**/spring-test-ejem1/target/*.jar'
